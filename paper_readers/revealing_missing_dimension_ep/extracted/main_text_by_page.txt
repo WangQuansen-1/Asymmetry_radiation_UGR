@@ -1,0 +1,699 @@
+Source: Zotero attachment X8Q38BJ7
+Title: Revealing the missing dimension at an exceptional point
+DOI: 10.1038/s41567-020-0807-y
+
+
+===== PAGE 1 =====
+Articles
+https://doi.org/10.1038/s41567-020-0807-y
+Revealing the missing dimension at an
+exceptional point
+Hua-Zhou Chen1,2,11, Tuo Liu 3,4,11, Hong-Yi Luan1,2,11, Rong-Juan Liu5, Xing-Yuan Wang6, Xue-Feng Zhu7,
+Yuan-Bo Li1, Zhong-Ming Gu3, Shan-Jun Liang3,4, He Gao3, Ling Lu 5, Li Ge 8,9 ✉, Shuang Zhang 10,
+Jie Zhu 3,4 ✉ and Ren-Min Ma 1,2 ✉
+The radiation of electromagnetic and mechanical waves depends not only on the intrinsic properties of the emitter but also on
+the surrounding environment. This principle has laid the foundation for the development of lasers, quantum optics, sonar, musi-
+cal instruments and other fields related to wave–matter interaction. In the conventional wisdom, the environment is defined
+exclusively by its eigenstates, and an emitter radiates into and interacts with these eigenstates. Here we show experimen-
+tally that this scenario breaks down at a non-Hermitian degeneracy known as an exceptional point. We find a chirality-reversal
+phenomenon in a ring cavity where the radiation field reveals the missing dimension of the Hilbert space, known as the Jordan
+vector. This phenomenon demonstrates that the radiation field of an emitter can become fully decoupled from the eigenstates
+of its environment. The generality of this striking phenomenon in wave–matter interaction is experimentally confirmed in both
+electromagnetic and acoustic systems. Our finding transforms the fundamental understanding of light–matter interaction and
+wave–matter interaction in general, and enriches the intriguing physics of exceptional points.
+I
+n electromagnetics, the canonical paradigm to consider the instruments to sonar, ultrasonography and surface acoustic wave
+radiation process is built on the notion that an emitter interacts functional devices, many breakthroughs have been enabled by the
+with the photonic eigenstates of its surrounding environment. evolving understanding of this paradigm14.
+This approach demonstrated its profound power in the understand- However, the notion that the photonic or mechanical environ-
+ing of spontaneous emission, which is a fundamental phenomenon ment is determined exclusively by its eigenstates came under scru-
+associated with the generation of light and plays an essential role tiny in non-Hermitian systems with quantum-inspired symmetries,
+in the development of modern quantum mechanics1–12. According including those obeying the so-called parity–time (PT) symme-
+to the theory pioneered by Weisskopf and Wigner1, spontaneous try15–27. PT-symmetric Hamiltonians can undergo a phase transition
+emission is induced by the zero-point energy of the vacuum photon from the PT-symmetric phase, with an entirely real spectrum, to the
+field. This concept was further developed by Purcell, who revealed spontaneously broken regime, where eigenvalues appear as complex
+that the rate of spontaneous emission relies on the interaction of the conjugate pairs24. In addition, a singularity known as an excep-
+emitter with the photonic eigenstates of its surrounding environ- tional point or non-Hermitian degeneracy arises at the symmetry-
+ment2. Over the past decades, various systems including dielectric breaking point28–31. At an exceptional point, two or more eigenstates
+structures, photonic crystals, plasmonics and metamaterials have become identical and so do their eigenvalues. As a result, the eigen-
+been developed to construct desired photonic states and control states do not span the entire Hilbert space at an exceptional point,
+light–matter interaction, leading to applications including low- with one or more dimensions missing. Mathematically, these miss-
+threshold lasers, efficient single-photon sources, high-precision ing dimensions are supplemented by the Jordan vectors32,33. While
+measurements, quantum information processing and so on4–12. this property, unique to non-Hermitian systems, has been known
+In like manner, a striking puzzle in the propagation of sound for decades, dating back to the study of nuclear decay34, the wave
+was solved by Lord Rayleigh at the beginning of the nineteenth functions of these missing dimensions have not been observed in
+century13. The aforementioned paradigm in electromagnetics any physical system.
+also revealed the acoustic whispering-gallery mode (WGM) that Utilizing the radiation of a single emitter in a PT-symmetric
+enhances human voices inside St Paul’s cathedral in London, whose ring cavity, here we experimentally reveal the wave function of the
+role Lord Rayleigh also contemplated in the propagation of earth- missing dimension at an exceptional point in both electromagnetic
+quake disturbances. In fact, the same notion regarding the source of and mechanical systems. Our observation presents the striking fact
+a mechanical wave and its surrounding vibrational modes has laid that the radiation field can become fully decoupled from the eigen-
+down the foundation to study, conceive and realize a wide range states of the environment, which fundamentally transforms our
+of dynamic behaviours. From architectural acoustics and musical understanding of the emission process. Furthermore, we show in
+1State Key Lab for Mesoscopic Physics and School of Physics, Peking University, Beijing, China. 2Frontiers Science Center for Nano-optoelectronics &
+Collaborative Innovation Center of Quantum Matter, Beijing, China. 3Department of Mechanical Engineering, Hong Kong Polytechnic University, Hong
+Kong SAR, China. 4Hong Kong Polytechnic University Shenzhen Research Institute, Shenzhen, China. 5Institute of Physics, Chinese Academy of Sciences/
+Beijing National Laboratory for Condensed Matter Physics, Beijing, China. 6College of Mathematics and Physics, Beijing University of Chemical Technology,
+Beijing, China. 7School of Physics and Innovation Institute, Huazhong University of Science and Technology, Wuhan, Hubei, China. 8Department of Physics
+and Astronomy, College of Staten Island, CUNY, Staten Island, NY, USA. 9Graduate Center, CUNY, New York, USA. 10School of Physics and Astronomy,
+University of Birmingham, Birmingham, UK. 11These authors contributed equally: Hua-Zhou Chen, Tuo Liu, Hong-Yi Luan. ✉e-mail: li.ge@csi.cuny.edu;
+jiezhu@polyu.edu.hk; renminma@pku.edu.cn
+NaTuRe PHYSiCS | VOL 16 | MAY 2020 | 571–578 | www.nature.com/naturephysics 571
+
+===== PAGE 2 =====
+Articles NaTure PHysIcs
+a c
+Normal ring 2
+Eigenstates
+Exceptional point
+= a + a
+1 ⊥ 2 Emitter 1 1 2 2 δ n/ I δ nR 1 1 = 2
+0
+Emitter 1 2
+b
+Exceptional point W
+C
+Eigenstates C
+a
+1 = 2 Emitter ≠ a′1 1 0 1
+–1
+Hermitian
+a 0 1 ⊥ 2
+CW
+1
+Emitter
+Fig. 1 | Chirality-reversal radiation at an exceptional point. a, Schematic of a normal ring cavity with uniform refractive index, which supports two
+counterpropagating eigenstates (left). A single emitter at the resonant frequency will excite both eigenstates, forced by the completeness and
+orthogonality of the eigenbasis (right). b, Schematic of a ring cavity operating at an exceptional point, where the two eigenstates coalesce (left). A single
+emitter can become fully decoupled from the coalesced eigenstate and radiate to the missing dimension with the opposite handedness (right). c, Evolution
+a
+o o r f t t h h o e g d o i n re a c l; t t io h n e s y o c f o a th le e s t c w e o w e h i e g n en δ s n t I a / t δ e n s R ψ =I 1 1 ;2 . N ¼ o (cid:31) te a t C h C C a W W t f (cid:30) or o δ f n a I / P δ T n - R s > y m 1 t m he e t h r o ic r i r z in o g n t c a a l v a i x ty is a c s h a a n fu g n e c s t f i r o o n m o f a δ CW n I / to δ n ia R . C W A . t δn I /δn R = 0, the two eigenstates are
+the experiment that the resulting radiation field displays completely coupling strengths from the CCW mode to the CW mode and vice
+opposite chirality to the coalesced eigenstate, leading to vortex emis- versa (Supplementary Section 1). The system operates at an excep-
+sion in the far field carrying a non-zero orbital angular momentum tional point when δn R δn I , that is, the coupling between the
+j j ¼ j j
+(OAM). The anomalous wave–matter interaction effect, the device two WGMs becomeIs unidirectional with either χ or χ vanishing,
+ab ba
+design scheme and the methodology we demonstrate in our work indicating that the back-reflections induced by the real and imagi-
+will contribute to a broad range of research fields, including non- nary parts of the index modulation δn R;I interfere with each other
+Hermitian physics, photonics and acoustics as well as chiral quan- in a completely destructive way for thIe CCW or CW wave. In this
+tum optics. scenario, the Hamiltonian becomes a defective matrix with a single
+coalesced eigenstate ψ . In Fig. 1c, we show the evolution of the
+EP
+General theoretical analysis two eigenstates as a fIunction of δn /δn . At δn /δn = 1, the two
+I R I R
+We first present a general theoretical analysis based on coupled- eigenstates become identical, that is, the unidirectional CCW mode
+mode equations to show that at an exceptional point the radiation ψ 0 , and the two-dimensional Hilbert space coalesces to a
+field of an emitter can become fully decoupled from the eigenstates EP ¼ 1
+(cid:31) (cid:30)
+of its environment. Let us briefly review the interaction of a single oIne-dimensional space.
+emitter with a normal ring cavity. At a given cavity resonant fre- At this exceptional point, a surprising phenomenon emerges
+quency, the eigenstates with a non-zero OAM are doubly degenerate when we introduce a single emitter to interact with the cav-
+with two counterpropagating directions, one travelling clockwise ity: the radiation field of the emitter can become fully decoupled
+(CW) and the other counterclockwise (CCW). Their wave func- from the eigenstate. Instead, it couples to the missing dimension
+tions are proportional to eilφ and e−ilφ, where l and −l are their of the Hilbert space, that is, the Jordan vector J 1 defined
+OAMs and φ is the azimuthal angle. We will refer to them also as / 0
+left-handed and right-handed WGMs. When a single emitter radi- by ðH � ω1 Þ J ¼ ψ EP , displaying the opposite haInd (cid:31) edn (cid:30) ess to the
+ates at this resonant frequency inside the cavity, both eigenstates will coaleIsced eigenstate (Fig. 1b). Considering a coupled-mode theory
+be excited, which is forced by the completeness and orthogonality of with an excitation source from a single emitter (Supplementary
+the eigenbasis (Fig. 1a). Section 2), the amplitude ratio of CCW to CW waves in the radia-
+Now consider a ring cavity operating at an exceptional point tion field can be derived as
+by introducing a PT-symmetric refractive index modulation
+(n ð φ Þ ¼ n 0 þ δn R cos ð 2lφ Þ � i δn I sin ð 2lφ Þ ) along the azimuthal a CCW 1 χ bað φ 0Þ 2
+diIrection (Fig. 1b), where n is the background refractive index, a ¼ � iΔ γ ð Þ
+0 CW � tot
+and δn and δn are real and imaginary parts of the refractive index
+R I
+modulation, respectively. The coupled-mode equations of the sys- where Δ is the detuning between the emitter oscillation fre-
+tem can be written as quency and cavity resonant frequency and χ (φ ) is the position-
+ba 0
+dependent coupling constant of the emitter-excited CW mode to
+d a CW iω � γ tot χ ab a CW i a CW t γ he , C a CW /a mo d c e a n (S n u o p t p b l e e m in e f n in ta it r e y , S in ec d t i i c o a n ti n 2) g . D th u a e t t w o e t h ca e n p n r o es t e o n b c t e a i o n f
+dt a ¼ χ iω γ a  H a tot CCW CW
+(cid:31) CCW (cid:30) (cid:31) ba � tot (cid:30)(cid:31) CCW (cid:30) (cid:31) CCW (cid:30) a pure CCW wave, that is, the coalesced eigenstate at the excep-
+1 tional point. When on resonance (Δ = 0), the ratio vanishes at
+ð Þ
+γ = −χ (φ ), which is the condition we have employed to observe a
+tot ba 0
+In equation (1), a (a ) is the complex amplitude of the pure Jordan vector at an exceptional point. In our conducted exper-
+CW CCW
+CW (CCW) wave, and ω and γ tot are the resonant frequency and iments, this is satisfied with the requirements of j χ bað φ 0Þj ¼ γ tot
+total decay rate of the unperturbed counterpropagating WGMs in and φ = π/4l. The analysis from the coupled-moIde equations
+0
+the non-Hermitian Hamiltonian HI . χ
+I
+ab ð ba Þ / ð δn R  δn I Þ are the provides us with an intuitive physical picture to understand the
+572 NaTuRe PHYSiCS | VOL 16 | MAY 2020 | 571–578 | www.nature.com/naturephysics
+
+===== PAGE 3 =====
+NaTure PHysIcs Articles
+chirality-reversal radiation via completely destructive interference to leading order in ς,where n is the imaginary part of the refractive
+I
+between the directly radiated and the backscattered CCW waves. index characterizing γ . The reciprocity of the Green’s function can
+tot
+At γ = −χ (φ ), the emitter’s position of φ = π/4l is a result of be easily checked despite the non-Hermitian nature of the system.
+tot ba 0 0
+the requirement of the destructive interference condition, while the It is important to note that this expression for the Green’s function
+requirement of χ φ γ ensures that the amplitude of the is independent of ς, and hence it can be applied to the exceptional
+j bað 0Þj ¼ tot
+reflected field acIcumulates and finally reaches the same value as point as well. Strikingly, it indicates that the emitter’s radiation can
+the direct emitted CCW mode (Supplementary Section 3). become completely decoupled from the coalesced eigenstate, which
+We note that the chirality-reversal phenomenon is in stark con- happens when 1 þ δ in n I R e � 2ilφ 0 ¼ 0. Note that this requirement is
+trast to exceptional point lasers, where the properties extracted are equivalent to the Ione we derived from coupled-mode equations. As
+solely determined by the chiral eigenstates, and not the Jordan vec- a result, the Green’s function (and hence the total radiation field)
+tors. When the emitter position deviates from φ = π/4l, the interfer- is unidirectional, following the Jordan vector in the CW direction,
+0
+ence condition will change accordingly. In exceptional point lasers, which completely reverses the chirality of the CCW ring resonance
+the emitters are distributed over the entire cavity, and therefore at the exceptional point.
+the chirality of the lasing mode is determined by the integrated
+radiation of all emitters. On the basis of the steady-state ab initio experimental verification in an electromagnetic system
+laser theory (SALT)35,36, we find that a uniform gain profile leads To construct the aforementioned exceptional point in an electro-
+to lasing in the coalesced eigenstate, but not in the Jordan vector magnetic system, we employ a PT-symmetric coaxial microwave
+(Supplementary Section 4). cavity to construct the exceptional point, where germanium ridges
+To further validify the analysis based on coupled-mode equa- and air grooves are used to modulate the imaginary and real parts
+tions, we employ the Green’s function to illustrate why the single of the refractive index, respectively (Fig. 2a and Supplementary
+emitter radiates with the opposite handedness to the coalesced Section 5). Note that the structure we constructed to interact
+eigenstate near and at an exceptional point. We note that, even with a single emitter is passive (that is, without gain), but still
+though electromagnetic and acoustic waves are different in several effectively PT symmetric. The cavity field is described by equa-
+fundamental perspectives, for example, with the latter being a lon- tion (1), and in the experiment we tune the PT-symmetric
+gitudinal wave and depending on the thermal dynamical properties modulation to δn = δn (χ = 0) to reach an exceptional point,
+R I ab
+of a needed propagation medium, both of them can be described giving rise to the coalesced CCW eigenstate with OAM |l| = 1 (Fig. 2b
+by the wave equation and a refractive index. Consequently, when and Supplementary Sections 1 and 6).
+the polarization of an electromagnetic mode is unimportant, the To investigate the interaction of a single emitter with the coax-
+respective electromagnetic and acoustic modes can be defined using ial cavity at the exceptional point, a dipole antenna is employed
+the Helmholtz equation. To capture their interaction with a single as a single source and inserted into the fabricated cavity (Fig. 2c,d
+emitter in a PT-symmetric ring cavity with a radius r , we use the and Methods). The radiation of a dipole antenna is governed by
+R
+corresponding Green’s function defined by its photonic environment as in the spontaneous emission, while
+a subtle difference lies in the radiation rate37. Another dipole
+1 ∂2 n2 φ k2 G φ; φ ; k 1 δ φ φ 3 antenna is used to probe the radiation field 22 mm above the
+(cid:31) r R 2 φ þ ð Þ (cid:30) ð 0 Þ ¼ r R ð � 0Þ ð Þ upper surface of the cavity, which leaks out through a ring opening
+(Fig. 2c and Supplementary Section 7). The height of the cavity
+where k is the free-space wave vector, and δ(φ − φ ) is a delta itself is 21 mm, and the resonant frequency at the exceptional point
+0
+function at the source position φ . If the quality factor of this CCW is around 8.212 GHz. Red lines in Fig. 2e,f show the measured phase
+0
+chiral mode is high, then the radiation of a point source embedded and amplitude of the radiation field when the excitation antenna
+inside the cavity is expected to follow the pattern of the CCW chiral is placed at the centre of the loss region (φ = π/4). There are two
+0
+mode on resonance at the exceptional point, which can be seen remarkable features of the radiation field. First, the phase increases
+from the bilinear expansion of the Green’s function: linearly from −π to π and the amplitude remains almost unchanged,
+which directly illustrates that the radiation field of the single-
+G ð φ; φ 0 ; k Þ  m α m ψ mð φ Þ ¼ m ð ψ k m 2 � ð φ ~k Þ 2 m ψ Þ m ð m ð φ ;m 0Þ Þ k ! ! ~kl ð ψ k lð 2 φ � Þ~k ψ 2 l l Þ ð ð φ l; 0 l Þ Þ ð 4 Þ d th ip e o a l n e t e e m nn it a t e e r x i c s i t a e s tr a a v s e t l a li n n d g i n w g a v w e a i v n e s i i d n e t t h h e e c c o a n vi t t r y o . l I n ex c p o e m ri p m a e r n is t o o n f ,
+P P a normal ring cavity without PT-symmetric modulation, showing
+where ψ mð φ Þ and ~k2 m are respectively the eigenstates and eigen- two amplitude nodes and the corresponding π phase jump at each
+values defin I ed by 1 ∂2I n2 φ ~k2 ψ φ 0, and (m,m) denotes node (blue curves in Fig. 2e,f). Second, the phase evolution of the
+r R 2 φ þ ð Þ m mð Þ ¼ radiation field indicates that it is a left-handed wave (~eilφ), that is,
+the non-HermitiahnI inner producit (Supplementary Section 4).
+it displays the opposite handedness to the coalesced right-handed
+However, this expectation following the conventional wisdom eigenstate (~e−ilφ) at the exceptional point.
+does not hold here, as indicated by the diverging right-hand side
+Therefore, the chirality-reversal radiation provides direct obser-
+of equation (4) at the exceptional point: the denominator vanishes
+vation of the wave function associated with the Jordan vector. It
+(that is, (l,l) = 0) due to the coalescence of the two eigenstates. To also reveals that the emitter can become fully decoupled from the
+resolve these issues, we start from a system slightly deviated from
+eigenstates of the system, which is fundamentally different from
+the exceptional point (δn I =δn R (cid:31) 1 (cid:30) ς2) and then take the limit previously reported chiral optical devices at an exceptional point
+ς ! 0 towards the excepItional point at δn I /δn R = 1. By omitting the (Supplementary video and Supplementary Section 4), where only
+oIff-resonance modes in equation (4), we approximate the Green’s the properties of the coalesced eigenstate are considered and
+function by the summation of the two almost identical eigenstates observed38–43. We also note that, when considering the time evolu-
+near the exceptional point, which are expressed in terms of CCW tion of an initial state at an exceptional point without the emitter,
+and CW waves themselves. We then insert it in equation (3) and the asymptotic wave function is given only by the coalesced eigen-
+drop the higher-harmonic terms in the product n2 ð φ Þ ψ mð φ Þ , which state, even when the initial input state is the Jordan vector44,45.
+gives the Green’s function: I The radiation of the single-emitter-excited exceptional point
+cavity is a vortex beam carrying OAM (Fig. 3a). Figure 3b shows
+G ð φ; φ 0 ; k Þ / eil ð φ � φ 0Þ þ 1 þ δ in n I R e � 2ilφ 0 e � il ð φ � φ 0Þ ð 5 Þ t s h p e ir m al ea p s h u a r s e e d a p m at p te li r t n u d a e n a d n d t p h h e as in e t o e f n t s h it e y c a s v in it g y u r l a a d ri i t a y t io d n u f e i el t d o . T t h h e e
+(cid:31) (cid:30)
+NaTuRe PHYSiCS | VOL 16 | MAY 2020 | 571–578 | www.nature.com/naturephysics 573
+
+===== PAGE 4 =====
+Articles NaTure PHysIcs
+a Eigenmode supported by the cavity b Dipole-excited field e
+Ge ridge Ge ridge
+Air groove
+Air groove
+c d f
+undefined phase at the centre show clearly the signatures of a vortex topological charge of the radiation field are also verified by observing
+beam with a topological charge of −1, and they match well with at different heights above the cavity (Supplementary Section 8).
+the simulation results (Fig. 3c). As a comparison, Fig. 3d shows Our system not only provides new understanding of light–matter
+the simulated amplitude and phase of the coalesced cavity eigen- interaction but also introduces a new means of control to manipu-
+state, which has the opposite handedness. The vortex nature and late the radiation field at the single-emitter level. This functionality
+esahP
+π
+0
+–π
+π/4 5π/4 9π/4
+φ
+π/4 5π/4 9π/4
+φ
+edutilpma
+dezilamroN
+CW
+Normal cavity
+Chirality reversal
+Dipole
+Chirality reversal
+1 Air groove
+Cover Cover 20 mm
+21 mm
+Hole for inserting antenna
+Ge ridge
+Rotatable base
+Normal cavity
+0
+Fig. 2 | experimental results of chirality-reversal radiation. a,b, Eigenstate (a) and single-emitter radiation field (b) of an exceptional point cavity.
+To construct an exceptional point, a PT-symmetric refractive index modulation is introduced into a ring cavity as air grooves and germanium ridges.
+c,d, Experimentally fabricated exceptional point cavity with the cover in closed (c) and open (d) configurations. e,f, Phase (e) and amplitude (f) of the
+single-emitter radiation field as a function of φ. As a comparison, the single-emitter radiation field of a normal ring cavity is also presented.
+Circles: experiment. Solid lines: theory.
+z
+60
+1
+–60 0 60
+Max.
+z E z E z E
+Max. Max.
+–Max. –Max. –Max.
+∣
+z∣
+Normalized
+E
+1
+0
+∣
+z∣
+Normalized
+E
+1
+0
+∣
+z∣
+Normalized
+E
+0
+0
+–60
+)mm(
+y
+60
+0
+–60
+)mm(
+y
+60
+0
+–60
+)mm(
+y
+60
+0
+–60
+)mm(
+y
+60
+0
+–60
+)mm(
+y
+60
+0
+–60
+)mm(
+y
+a b c d
+–60 0 60 –60 0 60
+x (mm) x (mm) x (mm)
+–60 0 60 –60 0 60 –60 0 60
+x (mm) x (mm) x (mm)
+Fig. 3 | Chirality-reversal vortex radiation from a single emitter. a, Schematic of the vortex radiation from a single emitter inside the exceptional point
+cavity. The radiation leaks out through a narrow ring opening on the cover of the cavity. b,c, Top row: experimental (b) and simulated (c) |E | fields of
+z
+the vortex radiation 22 mm above the cavity. Bottom row: the corresponding experimental and simulated E fields. d, Simulated |E | and E fields of the
+z z z
+coalesced eigenstate of the cavity. Clearly, the single-emitter-excited vortex radiation presents opposite handedness to the eigenstate.
+574 NaTuRe PHYSiCS | VOL 16 | MAY 2020 | 571–578 | www.nature.com/naturephysics
+
+===== PAGE 5 =====
+NaTure PHysIcs Articles
+60
+0
+–60
+is achieved via the position- and frequency-dependent chirality of to achieve slow sound, and the microperforated cavity walls yield
+the dipole-excited field (Fig. 4). Here the chirality is defined as12,46 resistive boundaries to tailor the loss (Supplementary Sections 10
+ζ 1 min ½j aCWj 2; j aCCWj 2 . The experimentally obtained chirality can and 11). The point sound source (monopole) is implemented by
+¼ � max
+½j
+aCWj 2;
+j
+aCCWj 2
+
+embedding a balanced armature, emitting acoustic waves into the
+rIeach a value as high as 0.995 at φ 0 = π/4 (Fig. 4c). Figure 4d shows passive PT-symmetric ring cavity. As for the electromagnetic exper-
+the amplitudes of the dipole-excited left-handed and right-handed iment, the centre of the loss region (φ = π/4) corresponds to the
+0
+fields as functions of the excitation frequency. The left-handed chirality-reversal condition.
+(right-handed) field reaches its maximum (minimum) near the The simulated and measured acoustic fields evidently validate
+resonant frequency. The contrast between left-handed and right- our theoretical prediction and are consistent with the results
+handed fields decreases as the frequency detuning increases, which obtained in the electromagnetic wave system. As shown in Fig. 5b,
+is consistent with our theoretical prediction. Figure 4e shows the the introduction of a balanced passive PT-symmetric modulation
+field distribution of the exceptional point cavity excited at a fre- alters the eigenstates of a normal ring cavity from a pair of counter-
+quency far away from resonance, and Fig. 4f shows the field distri- propagating modes to a coalesced CCW mode. The resultant chiral-
+bution of the normal ring cavity excited at the resonant frequency. ity, denoted by the acoustic intensity vectors (black cones in Fig. 5b),
+Both patterns are standing waves corresponding to zero chirality. can be represented by the continuous phase decrement from π to −π.
+As anticipated, the monopole sound source positioned at φ = π/4
+0
+experimental verification in an acoustic system does not excite the CCW mode. Instead, it generates a WGM with
+We have also observed the excitation of the Jordan vector and the reversed chirality to the cavity’s eigenmode, as depicted by the black
+associated chirality-reversal phenomenon in a mechanical wave cones in Fig. 5c. Consequently, the interference pattern nearly dis-
+system with a passive acoustic PT-symmetric ring cavity. The fab- appears in Fig. 5d, and the phase varies quasilinearly from −π to
+ricated sample consists of a closed ring cavity with a rectangular π in Fig. 5e, in stark contrast to the standing-wave field inside a
+cross-section with a = 25 mm and b = 50 mm (Fig. 5a). The inner normal cavity without PT-symmetric index modulation (blue lines
+and outer radii are 40 mm and 65 mm, respectively. The background and circles in Fig. 5d,e).
+acoustic refractive index for the fundamental mode inside the ring With the information experimentally retrieved from the stand-
+cavity is experimentally determined to be 1.0047 – i0.0038 (relative ing-wave ratio and phase gradient, it can be seen in Fig. 6a,b that
+to the acoustic refractive index of air; Supplementary Section 9). the chirality of the excited acoustic wave evolves continuously
+The complex acoustic index modulation, whose amplitudes with respect to the azimuthal sound source position φ . When
+0
+δn = δn ≈ 0.0278 are obtained from the chirality-reversal condi- π/12 < φ < 5π/12, the excited sound field is in the opposite direction
+R I 0
+tion, is realized by modifying the boundary condition of the cavity’s to the eigenmode. It becomes completely reversed as φ approaches
+0
+corresponding inner-wall regions with artificially constructed meta- π/4, which produces an almost linearly increased phase distribu-
+structures. The periodic metagrooves provide capacitive boundaries tion (Fig. 6c). At φ = π/12 or 5π/12, the CCW and CW modes
+0
+)mm(
+y
+0
+–60
+∣
+z∣
+∣
+z∣
+Normalized
+E
+Normalized
+E
+60
+ytisnetni
+laciteroehT
+)zHM(
+γ tot
+)mm(
+y
+1.0
+0.5
+0
+ytilarihC
+log(∣a
+CW
+/a CCW∣) 1
+0
+CW
+0.5
+0 CCW
+edutilpma
+dezilamroN
+a c e
+∞
+16
+(π/4)
+8 =
+–χba
+γtot
+0 –∞
+0 8 16 –π/4 π/4 3π/4 –60 0 60
+–𝜒ba (π/4) (MHz) φ0 x (mm)
+b d f
+1.0 1.0
+CW
+1
+0.5
+0
+CCW
+0
+–π/4 π/4 3π/4 8.16 8.19 8.22 8.25 –60 0 60
+φ0 Frequency (GHz) x (mm)
+Fig. 4 | Position- and frequency-dependent chirality of single-emitter radiation inside the exceptional point cavity. a, Amplitude ratio between the right-
+handed and left-handed waves of the single-emitter radiation field in the parameter space of γtot and χba (π/4). The yellow star indicates the experimental
+condition. b, Position-dependent left-handed and right-handed wave excitation of a single emitter inside the exceptional point cavity at χ φ γ .
+c, Position-dependent chirality of a single-emitter radiation field inside the exceptional point cavity at χ φ γ . Circles: experime j nIt b . a S ð ol 0 id Þ j li ¼ ne: t t o h t eory.
+d, Frequency-dependent left-handed and right-handed wave excitation of a single emitter inside the exc j eIp ba t ð ion 0 a Þ l j p ¼ oin t t o c t avity (filled circles) and the normal
+cavity (open circles). e, |E | field distribution of the excited field in the conditions indicated by the green star in d. f, |E | field distribution of the excited field in the
+z z
+conditions indicated by the black star in d. Both e and f exhibit nodes in the azimuthal direction, indicating the excitation of a standing wave with zero OAM.
+NaTuRe PHYSiCS | VOL 16 | MAY 2020 | 571–578 | www.nature.com/naturephysics 575
+
+===== PAGE 6 =====
+Articles NaTure PHysIcs
+have equal amplitudes and form a standing-wave field (Fig. 6d). chirality is in the same direction as the eigenmode (Fig. 6e). Such a
+After the azimuthal source position moves to −π/4 ≤ φ < 5π/12 or chirality-reversal behaviour of sound suggests an additional degree
+0
+5π/12 < φ ≤ 3π/4, the CCW mode outweighs the CW mode, so the of freedom, namely, the interplay between excitation source and
+0
+Phase Phase
+a b c
+Coalesced eigenstate Monopole-excited sound field
+π π
+–π –π
+d e
+π/4 5π/4 9π/4 π/4 5π/4 9π/4
+φ φ
+esahP
+π
+0
+–π
+edutilpma
+dezilamroN
+Microphone
+bIM
+Chirality reversal Chirality reversal
+a
+1
+b
+b
+RM
+Normal cavity
+Balanced Normal cavity
+armature 0
+Fig. 5 | experimental demonstrations of the chirality-reversal phenomenon in an acoustic wave system. a, Photograph of the passive acoustic
+PT-symmetric ring cavity (l = 1). The cavity’s inner and outer radii are 40 mm and 65 mm, respectively. For the cross-section, a = 25 mm and b = 50 mm.
+The real-part modulation is realized by decorating metagrooves on the inner wall with b RM = 29 mm; the imaginary part modulation is done by introducing
+leakages via the microperforated plates with b IM = 9.1 mm (Methods). The resonant frequency at the exceptional point is about 1,040 Hz. b,c, Eigenstate
+(b) and excited sound field (c) in the passive PT-symmetric ring cavity. Black cones: acoustic intensity vectors. d,e, Measured and simulated pressure
+amplitude (d) and phase (e) distributions of the passive PT-symmetric ring cavity. As a comparison, the single-emitter radiation field of a normal acoustic
+ring cavity is also presented. Circles: experiment. Solid lines: theory.
+Phase
+φ 0
+ytilarihC
+1.0
+0.5
+0
+Pressure
+Phase
+Phase
+Max.
+0
+Pressure
+Max.
+0
+Pressure
+φ0
+Max.
+0
+ytisnetni
+dezilamroN
+a c
+1.0 CW π
+0.5
+–π
+d
+CCW
+0 π
+–π/4 π/4 3π/4
+b
+–π
+e
+π
+–π
+–π/4 π/4 3π/4
+Fig. 6 | Chirality evolution in the passive acoustic PT-symmetric system. a,b, Position-dependent left/right-handed mode intensity (a) and chirality (b) of
+a monopole radiation field inside the exceptional point cavity at χ φ γ . The error bars denote the range of data variability from the mean values
+(data points) of three independent measurements. Circles: expe j rIim ba e ð nt 0 . Þ S j o ¼ lid t l o in t es: theory. c–e, Measured sound fields inside the ring cavity for different
+source positions (c, φ0 = π/4; d, φ0 = π/12; e, φ0 = −π/4). Left column: normalized pressure amplitude. Right column: phase. The bright spots denote the
+source position.
+576 NaTuRe PHYSiCS | VOL 16 | MAY 2020 | 571–578 | www.nature.com/naturephysics
+
+===== PAGE 7 =====
+NaTure PHysIcs Articles
+eigenstates, hidden behind non-Hermitian degeneracies, since the 8. Ma, R. M. & Oulton, R. F. Applications of nanolasers. Nat. Nanotechnol. 14,
+studied passive acoustic PT-symmetric system consistently operates 12–22 (2019).
+9. Lodahl, P., Mahmoodian, S. & Stobbe, S. Interfacing single photons and single
+at a fixed exceptional point during the whole evolution process. Our
+quantum dots with photonic nanostructures. Rev. Mod. Phys. 87, 347 (2015).
+demonstration of chirality reversal in the acoustic system provides 10. Ding, S. Y. et al. Nanostructure-based plasmon-enhanced Raman
+a new path towards highly efficient and controllable generation of spectroscopy for surface analysis of materials. Nat. Rev. Phys. 1, 16021 (2016).
+acoustic OAM with a single source, essential for many applications 11. Deng, F. G., Ren, B. C. & Li, X. H. Quantum hyperentanglement and its
+ranging from topological acoustics47,48 to particle manipulation and applications in quantum information processing. Sci. Bull. 62, 46–68 (2017).
+12. Lodahl, P. et al. Chiral quantum optics. Nature 541, 473–480 (2017).
+high-speed acoustic communication49,50. On the other hand, with
+13. Rayleigh, J. W. S. The problem of the whispering gallery. Philos. Mag. 20,
+their unique capabilities and flexibilities such as zero cutoff in a 1001 (1910).
+rigid waveguide and extremely low dispersion in air, acoustic wave 14. Rayleigh, J. W. S. The Theory of Sound (Dover, 1945).
+systems51–53 have been gaining momentum as a distinctive and effec- 15. Bender, C. M. & Boettcher, S. Real spectra in non-Hermitian Hamiltonians
+having PT symmetry. Phys. Rev. Lett. 80, 5243–5246 (1998).
+tive classical wave platform for experimental exploration of non-
+16. Bender, C. M., Boettcher, S. & Meisinger, P. N. PT-symmetric quantum
+Hermitian physics.
+mechanics. J. Math. Phys. 40, 2201–2229 (1999).
+17. Guo, A. et al. Observation of PT-symmetry breaking in complex optical
+Conclusions potentials. Phys. Rev. Lett. 103, 093902 (2009).
+In summary, we have revealed experimentally a surprising phe- 18. Rüter, C. E. et al. Observation of parity–time symmetry in optics. Nat. Phys.
+6, 192–195 (2010).
+nomenon of chirality-reversal radiation at an exceptional point,
+19. Regensburger, A. et al. Parity-time synthetic photonic lattices. Nature 488,
+which provides a direct observation of the wave function associ-
+167–171 (2012).
+ated with the Jordan vector, that is, the missing dimension of the 20. Peng, B. et al. Loss-induced suppression and revival of lasing. Science 346,
+Hilbert space. It also shows that the radiation field of an emitter can 328–332 (2014).
+become fully decoupled from the eigenstates of its environment. 21. Hodaei, H., Miri, M.-A., Heinrich, M., Christodoulides, D. N. & Khajavikhan,
+M. Parity-time-symmetric microring lasers. Science 346, 975–978 (2014).
+Based on the chirality-reversal mechanism, we have further dem-
+22. Feng, L., Wong, Z. J., Ma, R.-M., Wang, Y. & Zhang, X. Single-mode laser by
+onstrated vortex radiation with a tunable chirality. While there are
+parity–time symmetry breaking. Science 346, 972–975 (2014).
+various methods to generate optical vortices by directly modulat- 23. Cao, H. & Wiersig, J. Dielectric microcavities: model systems for wave chaos
+ing either laser cavities or the laser emission beam54,55, twisting the and non-Hermitian physics. Rev. Mod. Phys. 87, 61 (2015).
+radiation of a single emitter directly into a vortex beam remains 24. Feng, L., El-Ganainy, R. & Ge, L. Non-Hermitian photonics based on
+parity–time symmetry. Nat. Photonics 11, 752–762 (2017).
+a formidable task. A promising approach that has been demon-
+25. El-Ganainy, R. et al. Non-Hermitian physics and PT symmetry. Nat. Phys. 14,
+strated in the emerging chiral quantum optics employs spin- 11–19 (2018).
+momentum locking, which however requires a circularly polarized 26. Miri, M. A. & Alù, A. Exceptional points in optics and photonics. Science
+dipole emitter12,56,57. Here, instead, we have constructed a chiral 363, eaar7709 (2019).
+vacuum field to twist the radiation of an embedded dipole with 27. Özdemir, S. K., Rotter, S., Nori, F. & Yang, L. Parity-time symmetry and
+exceptional points in photonics. Nat. Mater. 18, 783–798 (2019).
+a simple linear polarization, which provides a new paradigm for
+28. Dembowski, C. Experimental observation of the topological structure of
+chiral quantum optics at the nanoscale. Our experimental demon- exceptional points. Phys. Rev. Lett. 86, 787 (2001).
+strations are conducted in both electromagnetic and mechanical 29. Heiss, W. D. Exceptional points of non-Hermitian operators. J. Phys. A 37,
+systems, which shows the generality of this striking phenomenon 2455–2464 (2004).
+in wave–matter interaction. Therefore, our finding enriches the 30. Wiersig, J. Enhancing the sensitivity of frequency and energy splitting
+detection by using exceptional points: application to microcavity sensors for
+understanding of the intriguing physics at an exceptional point,
+single-particle detection. Phys. Rev. Lett. 112, 203901 (2014).
+which we believe will have a broad influence on research fields 31. Berry, M. V. Physics of non-hermitian degeneracies. Czech. J. Phys. 54,
+including non-Hermitian physics, photonics and acoustics as well 1039–1047 (2004).
+as chiral quantum optics. 32. Pick, A. et al. General theory of spontaneous emission near exceptional
+points. Opt. Express 25, 12325–12348 (2017).
+33. Hernandez, E., Jauregui, A. & Mondragon, A. Jordan blocks and Gamow-
+Online content
+Jordan eigenfunctions associated with a degeneracy of unbound states.
+Any methods, additional references, Nature Research reporting Phys. Rev. A 67, 022721 (2003).
+summaries, source data, extended data, supplementary informa- 34. Okołowicz, J., Płoszajczak, M. & Rotter, I. Dynamics of quantum systems
+tion, acknowledgements, peer review information; details of author embedded in a continuum. Phys. Rep. 374, 271 (2003).
+35. Tureci, H. E., Ge, L., Rotter, S. & Stone, A. D. Strong interactions in
+contributions and competing interests; and statements of data and
+multimode random lasers. Science 320, 643–646 (2008).
+code availability are available at https://doi.org/10.1038/s41567-
+36. Ge, L., Chong, Y. D. & Stone, A. D. Steady-state ab initio laser theory:
+020-0807-y. generalizations and analytic results. Phys. Rev. A 82, 063824 (2010).
+37. Milonni, P. W. The Quantum Vacuum (Academic, 1994).
+Received: 16 September 2019; Accepted: 21 January 2020; 38. Lin, Z. et al. Unidirectional invisibility induced by PT-symmetric periodic
+Published online: 9 March 2020 structures. Phys. Rev. Lett. 106, 213901 (2011).
+39. Feng, L. et al. Experimental demonstration of a unidirectional reflectionless
+parity–time metamaterial at optical frequencies. Nat. Mater. 12,
+References 108–113 (2013).
+1. Weisskopf, V. & Wigner, E. Berechnung der natürlichen Linienbreite auf 40. Ge, L., Chong, Y. D. & Stone, A. D. Conservation relations and anisotropic
+Grund der Diracschen Lichttheorie. Z. Phys. 63, 54–73 (1930). transmission resonances in one-dimensional PT-symmetric photonic
+2. Purcell, E. M. Spontaneous emission probabilities at radio frequencies. heterostructures. Phys. Rev. A 85, 023802 (2012).
+Phys. Rev. 69, 681 (1946). 41. Peng, B. et al. Chiral modes and directional lasing at exceptional points.
+3. Haroche, S. & Kleppner, D. Cavity quantum electrodynamics. Phys. Today 42, Proc. Natl Acad. Sci. USA 113, 6845–6850 (2016).
+24–30 (1989). 42. Miao, P. et al. Orbital angular momentum microlaser. Science 353,
+4. Pelton, M. Modified spontaneous emission in nanophotonic structures. 464–467 (2016).
+Nat. Photonics 9, 427–435 (2015). 43. Wang, X.-Y., Chen, H.-Z., Li, Y., Li, B. & Ma, R.-M. Microscale vortex laser
+5. Noda, S., Fujita, M. & Asano, T. Spontaneous-emission control by photonic with controlled topological charge. Chin. Phys. B 25, 124211 (2016).
+crystals and nanocavities. Nat. Photonics 1, 449–458 (2007). 44. Longhi, S. & Della Valle, G. Optical lattices with exceptional points in the
+6. Lalanne, P., Yan, W., Vynck, K., Sauvan, C. & Hugonin, J. P. Light interaction continuum. Phys. Rev. A 89, 053132 (2014).
+with photonic and plasmonic resonances. Laser Photonics Rev. 12, 45. Ge, L. Non-Hermitian lattices with a flat band and polynomial power
+1700113 (2018). increase. Photonics Res. 6, A10–A17 (2018).
+7. Liu, Y. M. & Zhang, X. Metamaterials: a new frontier of science and 46. Wiersig, J. et al. Nonorthogonal pairs of copropagating optical modes in
+technology. Chem. Soc. Rev. 40, 2494–2507 (2011). deformed microdisk cavities. Phys. Rev. A 84, 023845 (2011).
+NaTuRe PHYSiCS | VOL 16 | MAY 2020 | 571–578 | www.nature.com/naturephysics 577
+
+===== PAGE 8 =====
+Articles NaTure PHysIcs
+47. Yang, Z. et al. Topological acoustics. Phys. Rev. Lett. 114, 114301 (2015). parity-time-symmetric metamaterials crystal. Phys. Rev. Lett. 120,
+48. Ma, G., Xiao, M. & Chan, C. Topological phases in acoustic and mechanical 124502 (2018).
+systems. Nat. Rev. Phys. 1, 281–294 (2019). 54. Padgett, M., Courtial, J. & Allen, L. Light’s orbital angular momentum.
+49. Jiang, X., Li, Y., Liang, B., Cheng, J. C. & Zhang, L. Convert acoustic Phys. Today 57, 35–40 (2004).
+resonances to orbital angular momentum. Phys. Rev. Lett. 117, 034301 (2016). 55. Yao, A. M. & Padgett, M. J. Orbital angular momentum: origins, behavior and
+50. Shi, C., Dubois, M., Wang, Y. & Zhang, X. High-speed acoustic applications. Adv. Opt. Photonics 3, 161–204 (2011).
+communication by multiplexing orbital angular momentum. Proc. Natl Acad. 56. Rodriguez-Fortuño, F. J. et al. Near-field interference for the unidirectional
+Sci. USA 114, 7250–7253 (2017). excitation of electromagnetic guided modes. Science 340, 328–330 (2013).
+51. Zhu, X. F., Ramezani, H., Shi, C. Z., Zhu, J. & Zhang, X. PT-symmetric 57. Petersen, J., Volz, J. & Rauschenbeutel, A. Chiral nanophotonic waveguide
+acoustics. Phys. Rev. X 4, 031042 (2014). interface based on spin-orbit interaction of light. Science 346, 67–71 (2014).
+52. Fleury, R., Sounas, D. & Alù, A. An invisible acoustic sensor based on
+parity–time symmetry. Nat. Commun. 6, 5905 (2015). Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in
+53. Liu, T., Zhu, X., Chen, F., Liang, S. & Zhu, J. Unidirectional wave vector published maps and institutional affiliations.
+manipulation in two-dimensional space with an all passive acoustic © The Author(s), under exclusive licence to Springer Nature Limited 2020
+578 NaTuRe PHYSiCS | VOL 16 | MAY 2020 | 571–578 | www.nature.com/naturephysics
+
+===== PAGE 9 =====
+NNaaTTuurree PPHHyyssIIccss AArrttiicclleess
+Methods numbers. In the acoustic wave simulation, the background medium is air (22.5 °C,
+Experimental set-up. The microwave cavity is made of stainless steel and consists one standard atmospheric pressure) with density ρ0 = 1.194 kg m−3 and speed of
+of a bottom base and a cover, as shown in Fig. 2c,d. The radii of the central metal sound c a = 344.6 m s−1. Other geometrical and material properties of the acoustic
+cylinder and the cavity are 20 mm and 60 mm, respectively. The height of the ring cavity include the following: cross-sectional area a × b = 25 × 50 mm2, inner
+cavity is 21 mm. The thicknesses of the germanium ridges and air grooves used radius r R1 = 40 mm, outer radius r R2 = 65 mm, subwavelength periodic grooves
+for refractive index modulation are both 2 mm. In the experiment, we employ with w = 3π/200 rad, p = π/40 rad, h = 5 mm and b RM = 29 mm, and open-
+a microwave vector network analyser to excite an antenna (fixed within the back impedance boundaries with Z mpp = (8.4 + i0.4)ρ0 c a and b IM = 9.1 mm
+cavity) as a source to excite the cavity field. The input power is set to be 5 mW. (Supplementary Sections 10 and 11).
+The spectral scanning step is 1 MHz, and the intermediate frequency bandwidth
+is 50 kHz. The excitation frequency is in the range of 8.150–8.270 GHz. We Data availability
+probe the excited field with another antenna (2 mm length) fixed on an alumina The data represented in Figs. 2–6 are available as Source Data. All other data that
+plate above the cavity. The relative position of the probe antenna (fixed on the support the plots within this paper and other findings of this study are available
+alumina plate) to the microwave cavity can be tuned by an XYZ translation from the corresponding author on reasonable request.
+stage placed at the bottom. The spatial scanning steps in the azimuthal direction
+and radial direction are set to be 1 mm and 2 mm, respectively. The excitation acknowledgements
+antenna is along the azimuthal direction since the electric field component
+along the azimuthal direction (E ) is dominant inside the cavity. In the vicinity This work is supported by NSFC under project Nos. 11774014, 91950115, 11574012
+of the alumina plate, only the E φ field (electric field component perpendicular to and 61521004, Beijing Natural Science Foundation (Z180011) and the National Key
+the alumina plate) exists due to z the continuity requirements, and therefore we R&D Programme of China (2018YFA0704401). J.Z. is supported by the Early Career
+measure the E field in our experiment. Note that the E field has a phase shift of Scheme of Hong Kong RGC (grant no. PolyU 252081/15E) and the National Natural
+π/2 with respe z ct to the E field (Supplementary Fig. 8). z The antennas are made of Science Foundation of China (grant no. 11774297). L.G. is supported by NSF under
+coaxial cable. The outer c φ onductor and sheath at the end of the cable are stripped grant no. PHY-1847240. L.L. is supported by the National Key R&D Programme of
+away, leaving the centre conductor exposed (the diameter and the length are China under grant nos 2017YFA0303800 and 2016YFA0302400 and by NSFC under
+0.9 mm and 11 mm, respectively). project no. 11721404. R.-J.L. is supported by NSFC under project no. 11974415. X.-F.Z.
+For experimental measurements in the acoustic wave system, as shown in acknowledges financial support from the National Natural Science Foundation of China
+Supplementary Fig. 16, the lock-in amplifier (Zurich Instruments HF2LI) sends (grant nos 11674119, 11690030 and 11690032) and the Bird Nest Plan of HUST.
+a continuous sinusoidal signal to the balanced armature (Knowles CI-22955)
+embedded at the bottom of the cavity. The operating frequency sweeps from author contributions
+950 to 1,150 Hz, covering the first-order cavity resonant frequency, 1,040 Hz. R.-M.M. conceived the concept and supervised the project. H.-Z.C., X.-Y.W. and
+The vent of the balanced armature is about 1 mm in diameter, much smaller R.-M.M. performed the coupled-mode equation analysis and conducted the
+than the wavelength (~331.3 mm at 1,040 Hz), and serves as a monopole source. electromagnetic simulation. H.-Y.L., Y.-B.L., R.-J.L., L.L. and R.-M.M. carried out the
+The generated sound field inside the cavity is measured point by point with an microwave experiments. H.-Y.L. and R.-M.M. did the data analysis of the microwave
+azimuthal step of 10º using a 1/4-inch microphone (Brüel & Kjær type 4935), experiment. J.Z. and R.-M.M. initiated the acoustic experiment. T.L., H.-Z.C. and X.-F.Z.
+during which the microphone itself forms part of the wall (that is, it works as performed the simulation and designed the acoustic experiment. T.L., Z.-M.G., S.-J.L.
+a pressure-field microphone) and other holes on the upper cover are sealed and H.G. conducted the acoustic experiments. T.L., X.Z. and R.-M.M. did the data
+using plugs (Supplementary Fig. 16b). The signal is then recorded by the lock-in analysis of the acoustic experiment. J.Z. supervised the acoustic experiment.
+amplifier after going through a conditioning amplifier (Brüel & Kjær, NEXUS L.G. performed the Green function and Jordan vector analysis. R.-M.M., H.-Z.C., L.G.,
+Type 2693A). Here the electrical signal applied to the balanced armature is used as T.L., J.Z., X.-Y.W. and S.Z. wrote the manuscript.
+a reference signal to calibrate the phase response. At the bottom of the cavity,
+a series of slots (azimuthal spacing 15º) is reserved to install the balanced armature Competing interests
+(Supplementary Fig. 16c) so that different source positions can be considered. The authors declare no competing interests.
+Numerical mode simulations. We use the commercial software COMSOL
+additional information
+Multiphysics to carry out the full-wave simulation throughout this work. In the
+simulation of the electromagnetic field, the metal is assumed to be a perfect Supplementary information is available for this paper at https://doi.org/10.1038/
+electric conductor. For germanium material, the relative dielectric constant s41567-020-0807-y.
+and the electrical conductivity are set to be 16.3 and 2.13 S m−1, respectively. Correspondence and requests for materials should be addressed to L.G., J.Z. or
+The thicknesses of the germanium ridges and air grooves are both 2 mm. The R.-M.M.
+simulation shows that there only exists one pair of WGM modes at 8.208 GHz
+Peer review information Nature Physics thanks Andrea Alu, Nicolas Bachelard, Romain
+in the frequency range of 8.150–8.270 GHz. The electric field distribution of this
+Fleury and Stefan Rotter for their contribution to the peer review of this work.
+cavity mode is shown in Supplementary Fig. 8. This result justifies our neglect
+of other cavity modes with different angular momentums and radial quantum Reprints and permissions information is available at www.nature.com/reprints.
+NaTuRe PHYSiCS | www.nature.com/naturephysics

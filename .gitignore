@@ -1,0 +1,66 @@
+# MATLAB generated files
+*.asv
+*.autosave
+*.m~
+*.mex*
+codegen/
+slprj/
+*.slxc
+
+# Python caches, environments, and packaging output
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+
+# COMSOL temporary, recovery, and lock files
+*.mph.lock
+*.mph~
+*.mph.bak
+*.mphbin
+*.mphstatus
+.comsol/
+recovery/
+
+# Large COMSOL models paused from normal Git (>100 MB).
+# Remove these entries only after configuring and validating Git LFS.
+/equanl_plane.mph
+/双层结构非对称测试_仿照optic_左右手性相同_CPA_辐射_purcell_高手性低放大倍数.mph
+
+# Reproducible generated outputs; source scripts and small Output*.txt remain tracked.
+/comparison_output/
+/figure_output/
+/structure_output/
+/theory_output/
+
+# Local credentials and private keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+
+# Editors and operating-system metadata
+.idea/
+.vscode/
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+~$*
+*.tmp
+*.temp

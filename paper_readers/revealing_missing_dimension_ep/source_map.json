@@ -1,0 +1,185 @@
+{
+  "title": "Revealing the missing dimension at an exceptional point",
+  "doi": "10.1038/s41567-020-0807-y",
+  "zotero_item_key": "GBHX46SI",
+  "main_pdf_attachment_key": "X8Q38BJ7",
+  "supplement_pdf_attachment_key": "GCZ7VLL8",
+  "source_pdf": "F:/文献/storage/X8Q38BJ7/Chen et al_2020_Revealing the missing dimension at an exceptional point.pdf",
+  "reader_file": "paper.md",
+  "raw_text_file": "extracted/main_text_by_page.txt",
+  "source_format": "pdf-text",
+  "confidence": "high for page-level text and figure placement; medium for column-reflowed paraphrase blocks",
+  "blocks": [
+    {
+      "id": "S001",
+      "page": 1,
+      "type": "abstract",
+      "section": "Abstract",
+      "role": "main claim",
+      "nearby_figures": [],
+      "confidence": "high"
+    },
+    {
+      "id": "S002",
+      "page": 1,
+      "type": "body",
+      "section": "Introduction",
+      "role": "gap: eigenstate-only environment picture fails at EP",
+      "nearby_figures": [],
+      "confidence": "high"
+    },
+    {
+      "id": "F001",
+      "page": 2,
+      "type": "figure",
+      "section": "Fig. 1",
+      "asset": "assets/fig1.png",
+      "role": "conceptual mechanism",
+      "confidence": "high"
+    },
+    {
+      "id": "S003",
+      "page": 2,
+      "type": "body",
+      "section": "General theoretical analysis",
+      "role": "coupled-mode model and EP construction",
+      "nearby_figures": [
+        "F001"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "S004",
+      "pages": [
+        2,
+        3
+      ],
+      "type": "body",
+      "section": "General theoretical analysis",
+      "role": "destructive interference and Green's-function/Jordan-vector mechanism",
+      "nearby_figures": [
+        "F001"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "F002",
+      "page": 4,
+      "type": "figure",
+      "section": "Fig. 2",
+      "asset": "assets/fig2.png",
+      "role": "microwave near-field evidence",
+      "confidence": "high"
+    },
+    {
+      "id": "S005",
+      "pages": [
+        3,
+        4
+      ],
+      "type": "body",
+      "section": "Experimental verification in an electromagnetic system",
+      "role": "microwave PT ring, source placement, travelling-wave evidence",
+      "nearby_figures": [
+        "F002",
+        "F003"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "F003",
+      "page": 4,
+      "type": "figure",
+      "section": "Fig. 3",
+      "asset": "assets/fig3.png",
+      "role": "far-field vortex/OAM evidence",
+      "confidence": "high"
+    },
+    {
+      "id": "F004",
+      "page": 5,
+      "type": "figure",
+      "section": "Fig. 4",
+      "asset": "assets/fig4.png",
+      "role": "position and frequency dependence",
+      "confidence": "high"
+    },
+    {
+      "id": "S006",
+      "pages": [
+        5,
+        6
+      ],
+      "type": "body",
+      "section": "Experimental verification in an acoustic system",
+      "role": "acoustic generality test",
+      "nearby_figures": [
+        "F005",
+        "F006"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "F005",
+      "page": 6,
+      "type": "figure",
+      "section": "Fig. 5",
+      "asset": "assets/fig5.png",
+      "role": "acoustic chirality reversal",
+      "confidence": "high"
+    },
+    {
+      "id": "F006",
+      "page": 6,
+      "type": "figure",
+      "section": "Fig. 6",
+      "asset": "assets/fig6.png",
+      "role": "source-position chirality evolution",
+      "confidence": "high"
+    },
+    {
+      "id": "S007",
+      "page": 7,
+      "type": "body",
+      "section": "Conclusions",
+      "role": "meaning and applications",
+      "nearby_figures": [],
+      "confidence": "high"
+    },
+    {
+      "id": "S008",
+      "page": 9,
+      "type": "methods",
+      "section": "Methods",
+      "role": "experimental and simulation parameters",
+      "nearby_figures": [],
+      "confidence": "medium"
+    }
+  ],
+  "terminology": [
+    {
+      "term": "exceptional point",
+      "translation": "异常点 / 非厄米简并点"
+    },
+    {
+      "term": "coalesced eigenstate",
+      "translation": "合并本征态"
+    },
+    {
+      "term": "Jordan vector",
+      "translation": "Jordan 向量 / 广义本征向量"
+    },
+    {
+      "term": "missing dimension",
+      "translation": "缺失维度"
+    },
+    {
+      "term": "chirality reversal",
+      "translation": "手性反转"
+    },
+    {
+      "term": "Green's function",
+      "translation": "Green 函数"
+    }
+  ]
+}
