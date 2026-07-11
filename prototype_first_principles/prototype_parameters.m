@@ -6,12 +6,19 @@ function cfg = prototype_parameters(resolution)
         resolution = 'standard';
     end
 
-    cfg.c0 = 343;
-    cfg.rho0 = 1.21;
+    % PDE material values at 293.15 K (Air, from_mat in the saved model).
+    cfg.c0 = 343.2035820928282;
+    cfg.rho0 = 1.204317574535839;
+    % The model's custom Ez/Ef definitions deliberately use these global
+    % constants instead of the material values.
+    cfg.outputC0 = 343;
+    cfg.outputRho0 = 1.21;
     cfg.gammaAir = 1.4;
-    cfg.dynamicViscosity = 1.81e-5;      % Pa*s
-    cfg.thermalConductivity = 0.0257;    % W/(m*K)
-    cfg.Cp = 1005;                       % J/(kg*K)
+    cfg.dynamicViscosity = 1.813968630733944e-5; % Pa*s
+    cfg.thermalConductivity = 0.02576818523619658; % W/(m*K)
+    cfg.Cp = 1005.422071127131;          % J/(kg*K)
+    cfg.temperature = 293.15;            % K, fixed model input
+    cfg.thermalExpansion = 0.003411222923418045; % 1/K
 
     cfg.D = 0.100;
     cfg.a = cfg.D/2;
@@ -62,28 +69,34 @@ function cfg = prototype_parameters(resolution)
             cfg.num.apertureAxialMax = 1;
             cfg.num.cavityAngularMax = 4;
             cfg.num.cavityAxialMax = 3;
+            cfg.num.cavityRadialMax = 5;
+            cfg.num.cavityQuadRadial = 14;
             cfg.num.ductM = 5;
             cfg.num.ductRadialRoots = 4;
         case 'standard'
             cfg.resolution = 'standard';
-            cfg.num.quadTheta = 8;
-            cfg.num.quadZ = 5;
-            cfg.num.apertureAngularMax = 3;
-            cfg.num.apertureAxialMax = 2;
+            cfg.num.quadTheta = 20;
+            cfg.num.quadZ = 14;
+            cfg.num.apertureAngularMax = 5;
+            cfg.num.apertureAxialMax = 4;
             cfg.num.cavityAngularMax = 6;
             cfg.num.cavityAxialMax = 4;
-            cfg.num.ductM = 7;
-            cfg.num.ductRadialRoots = 5;
+            cfg.num.cavityRadialMax = 9;
+            cfg.num.cavityQuadRadial = 24;
+            cfg.num.ductM = 12;
+            cfg.num.ductRadialRoots = 12;
         case 'high'
             cfg.resolution = 'high';
-            cfg.num.quadTheta = 10;
-            cfg.num.quadZ = 6;
+            cfg.num.quadTheta = 16;
+            cfg.num.quadZ = 12;
             cfg.num.apertureAngularMax = 4;
             cfg.num.apertureAxialMax = 3;
             cfg.num.cavityAngularMax = 8;
             cfg.num.cavityAxialMax = 6;
-            cfg.num.ductM = 9;
-            cfg.num.ductRadialRoots = 7;
+            cfg.num.cavityRadialMax = 12;
+            cfg.num.cavityQuadRadial = 28;
+            cfg.num.ductM = 20;
+            cfg.num.ductRadialRoots = 20;
         otherwise
             error('Unknown resolution: %s',resolution);
     end

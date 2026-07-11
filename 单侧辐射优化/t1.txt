@@ -1,0 +1,6 @@
+for i=1:8
+model.component("comp1").probe(strcat("point",num2str(i))).set("probename", strcat("ph",num2str(i)));
+% model.component("comp1").probe("point9").selection().set();
+% model.component("comp1").probe("point9").selection().set(13);
+model.component("comp1").probe(strcat("point",num2str(i))).set("expr", "(acpr.p_b)");
+end

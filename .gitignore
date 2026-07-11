@@ -38,6 +38,9 @@ recovery/
 /双层结构非对称测试_仿照optic_左右手性相同_CPA_辐射_purcell_高手性低放大倍数.mph
 /原型.mph
 
+/双层结构非对称测试_仿照optic_左右手性相同_CPA_200-辐射.mph
+/双层结构非对称测试_仿照optic_左右手性相同_CPA_200-辐射-单侧辐射优化.mph
+
 # Reproducible generated outputs; source scripts and small Output*.txt remain tracked.
 /comparison_output/
 /figure_output/
