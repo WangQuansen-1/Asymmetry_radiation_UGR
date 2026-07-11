@@ -36,6 +36,7 @@ recovery/
 # Remove these entries only after configuring and validating Git LFS.
 /equanl_plane.mph
 /双层结构非对称测试_仿照optic_左右手性相同_CPA_辐射_purcell_高手性低放大倍数.mph
+/原型.mph
 
 # Reproducible generated outputs; source scripts and small Output*.txt remain tracked.
 /comparison_output/
