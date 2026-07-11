@@ -1,0 +1,2 @@
+comsol_total,comsol_physical,comsol_pml_dominated,theory_candidates,paired_physical,high_confidence_pairs,real_RMSE_Hz,real_median_abs_Hz,imag_RMSE_Hz,Forward_RMSE,Backward_RMSE,high_real_RMSE_Hz,high_Forward_RMSE,high_Backward_RMSE
+60,60,0,61,60,2,87.2448098588631,55.805180330705,70.0161609266543,0.329029339969553,0.368672374998742,1.52949309340772,0.0220044417352371,0.0112685281814525

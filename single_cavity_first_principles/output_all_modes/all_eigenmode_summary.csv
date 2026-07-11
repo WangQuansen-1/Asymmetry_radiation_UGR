@@ -1,0 +1,2 @@
+comsol_mode_count,physical_comsol_mode_count,pml_dominated_mode_count,theory_candidate_count,paired_count,real_RMSE_Hz,real_median_abs_Hz,real_max_abs_Hz,imag_RMSE_Hz,imag_median_abs_Hz,channel_RMSE,channel_max_abs,ambiguous_pair_count,high_confidence_count,high_real_RMSE_Hz,high_imag_RMSE_Hz,high_channel_RMSE
+60,31,29,31,31,29.1424569377572,16.5236156726701,74.9315708409599,41.906264049836,29.3274818140183,0.286975550438875,0.999999996733604,2,9,4.48153198880654,37.5147137922093,0.0135419418391416

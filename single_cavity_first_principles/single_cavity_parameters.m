@@ -39,6 +39,8 @@ cfg.driveFrequency = 1479.2;
 cfg.numEigenmodes = 10;
 cfg.backend = 'fem';
 cfg.femOrder = 2;
+cfg.useFinitePML = false;
+cfg.pmlStretch = 3*(1-1i);
 
 cfg.wallLoss = 'none';
 cfg.wallLossScale = 1.0;
