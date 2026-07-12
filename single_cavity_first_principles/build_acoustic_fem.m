@@ -7,7 +7,15 @@ v0=double(mesh.vertex);tet0=double(mesh.tet);
 pmlElement=false(1,size(tet0,2));
 if isfield(cfg,'useFinitePML') && cfg.useFinitePML
     if ~isfield(mesh,'prism'),error('Frozen mesh does not contain PML prisms.');end
-    prismTet=split_prisms(double(mesh.prism));
+    prism0=double(mesh.prism);
+    refine=1;if isfield(cfg,'pmlAxialRefinement'),refine=cfg.pmlAxialRefinement;end
+    if refine<1 || refine~=round(refine) || bitand(uint32(refine),uint32(refine-1))~=0
+        error('pmlAxialRefinement must be a positive power of two.');
+    end
+    while refine>1
+        [v0,prism0]=bisect_prisms_axial(v0,prism0);refine=refine/2;
+    end
+    prismTet=split_prisms(prism0);
     tet0=[tet0,prismTet];
     pmlElement=[pmlElement,true(1,size(prismTet,2))];
 end
@@ -17,7 +25,31 @@ v=v0(:,used);tet=double(map(tet0));nVertex=size(v,2);ne=size(tet,2);
 [grad,vol]=tet_geometry(v,tet);
 stretch=ones(1,ne);
 if any(pmlElement),stretch(pmlElement)=cfg.pmlStretch;end
-if cfg.femOrder==1
+useQuadraticPML=cfg.femOrder==1 && any(pmlElement) && ...
+    isfield(cfg,'pmlOrder') && cfg.pmlOrder==2;
+if useQuadraticPML
+    phys=~pmlElement;pml=pmlElement;
+    [Kphys,Mphys]=assemble_p1(tet(:,phys),grad(:,phys,:),vol(phys), ...
+        stretch(phys),nVertex);
+    [pmlEdges,pmlEdgeId]=tet_edges(tet(:,pml));
+    pmlConn=[tet(:,pml);nVertex+pmlEdgeId];nFull=nVertex+size(pmlEdges,1);
+    [Kpml,Mpml]=assemble_p2(pmlConn,grad(:,pml,:),vol(pml),stretch(pml),nFull);
+    Kfull=Kpml;sK=size(Kphys,1);Kfull(1:sK,1:sK)=Kfull(1:sK,1:sK)+Kphys;
+    Mfull=Mpml;sM=size(Mphys,1);Mfull(1:sM,1:sM)=Mfull(1:sM,1:sM)+Mphys;
+    z=v(3,:);atInterface=abs(abs(z(pmlEdges(:,1)))-cfg.ductLength/2)<1e-8 & ...
+        abs(abs(z(pmlEdges(:,2)))-cfg.ductLength/2)<1e-8;
+    freeEdge=find(~atInterface);n=nVertex+numel(freeEdge);
+    row=[(1:nVertex).';nVertex+freeEdge(:); ...
+        nVertex+find(atInterface);nVertex+find(atInterface)];
+    interfaceEdge=pmlEdges(atInterface,:);
+    col=[(1:nVertex).';nVertex+(1:numel(freeEdge)).'; ...
+        interfaceEdge(:,1);interfaceEdge(:,2)];
+    val=[ones(nVertex+numel(freeEdge),1);0.5*ones(2*size(interfaceEdge,1),1)];
+    T=sparse(row,col,val,nFull,n);
+    Kbase=T'*Kfull*T;M=T'*Mfull*T;
+    midXYZ=0.5*(v(:,pmlEdges(freeEdge,1))+v(:,pmlEdges(freeEdge,2)));
+    v=[v,midXYZ];conn=tet;allEdges=[];
+elseif cfg.femOrder==1
     conn=tet;n=nVertex;[Kbase,M]=assemble_p1(conn,grad,vol,stretch,n);
     allEdges=[];
 else
@@ -26,6 +58,22 @@ else
     edgeXYZ=0.5*(v(:,allEdges(:,1))+v(:,allEdges(:,2)));
     v=[v,edgeXYZ];n=size(v,2);
     [Kbase,M]=assemble_p2(conn,grad,vol,stretch,n);
+end
+
+if isfield(cfg,'useThermoviscous') && cfg.useThermoviscous
+    if cfg.femOrder~=1
+        error('The finite-PML TVB audit currently requires FEM order 1.');
+    end
+    if ~isfield(mesh,'tvbBoundaries'),error('Frozen mesh lacks TVB boundary IDs.');end
+    triWall0=double(mesh.tri(:,ismember(mesh.triBoundary,mesh.tvbBoundaries)));
+    keepWall=all(map(triWall0)>0,1);triWall=double(map(triWall0(:,keepWall)));
+    [Sw,Bw]=surface_operators_p1(v,triWall,n);
+    omega=2*pi*cfg.tvbLinearizationFrequency;
+    deltaV=sqrt(2*cfg.mu/(cfg.rho0*omega));
+    deltaT=sqrt(2*cfg.kappa/(cfg.rho0*cfg.Cp*omega));
+    a=(1-1i)/2;
+    Kbase=Kbase-a*deltaV*Sw;
+    M=M+a*(cfg.gamma-1)*deltaT*Bw;
 end
 
 % The physical mesh ends at z=+-L/2; the discarded axial PML is replaced
@@ -52,11 +100,41 @@ fprintf('FEM-P%d (%s): %d DOFs, %d tetrahedra, %d radiation triangles\n', ...
     cfg.femOrder,kind,n,ne,size(tri,2));
 end
 
+function [S,B]=surface_operators_p1(v,tri,n)
+p1=v(:,tri(1,:));p2=v(:,tri(2,:));p3=v(:,tri(3,:));
+nvec=cross(p2-p1,p3-p1,1);twiceA=sqrt(sum(nvec.^2,1));
+area=0.5*twiceA;nhat=nvec./twiceA;
+g1=cross(nhat,p3-p2,1)./twiceA;
+g2=cross(nhat,p1-p3,1)./twiceA;
+g3=cross(nhat,p2-p1,1)./twiceA;
+g=cat(3,g1,g2,g3);nt=size(tri,2);
+I=zeros(9,nt);J=I;VS=I;VB=I;q=0;
+for i=1:3
+    for j=1:3
+        q=q+1;I(q,:)=tri(i,:);J(q,:)=tri(j,:);
+        VS(q,:)=area.*sum(g(:,:,i).*g(:,:,j),1);
+        VB(q,:)=area.*(1+(i==j))/12;
+    end
+end
+S=sparse(I(:),J(:),VS(:),n,n);B=sparse(I(:),J(:),VB(:),n,n);
+end
+
 function tet=split_prisms(p)
 % COMSOL prism order: bottom triangle 1:3, corresponding top triangle 4:6.
 pat=[1 2 3 4;2 3 4 5;3 4 5 6];
 np=size(p,2);tet=zeros(4,3*np);
 for k=1:3,tet(:,(k-1)*np+(1:np))=p(pat(k,:),:);end
+end
+
+function [v,p2]=bisect_prisms_axial(v,p)
+% Bisect every swept PML prism along its three vertical edges.
+np=size(p,2);
+raw=[sort(p([1 4],:),1),sort(p([2 5],:),1),sort(p([3 6],:),1)].';
+[edge,~,ic]=unique(raw,'rows','sorted');
+mid=size(v,2)+(1:size(edge,1));
+v=[v,0.5*(v(:,edge(:,1))+v(:,edge(:,2)))];
+ids=reshape(mid(ic),np,3).';
+p2=[p(1:3,:),ids;ids,p(4:6,:)];
 end
 
 function [grad,vol]=tet_geometry(v,tet)

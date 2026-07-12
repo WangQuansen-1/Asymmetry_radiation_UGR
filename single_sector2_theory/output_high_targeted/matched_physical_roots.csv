@@ -1,0 +1,2 @@
+comsol_index,theory_index,comsol_real_Hz,theory_real_Hz,comsol_imag_Hz,theory_imag_Hz,comsol_Forward,theory_Forward,comsol_Backward,theory_Backward,real_relative_error,imag_relative_error
+26,1,1677.3659872693,1678.02158005019,16.0542652453109,13.325385707472,0.502105103635897,0.499999999999998,0.505394136007118,0.500000000000002,0.000390846592729864,0.169978475884218

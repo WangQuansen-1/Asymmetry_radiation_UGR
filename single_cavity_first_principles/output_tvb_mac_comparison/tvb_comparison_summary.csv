@@ -1,0 +1,2 @@
+mode_count,meaningful_loss_mode_count,max_no_loss_real_relative_error,median_tvb_real_relative_error,max_tvb_real_relative_error,median_loss_increment_relative_error,max_loss_increment_relative_error,loss_modes_within_10pct
+60,45,0.0865450569184929,0.0370803893640932,0.0736526095566812,0.993158065382663,1.59857102516508,0

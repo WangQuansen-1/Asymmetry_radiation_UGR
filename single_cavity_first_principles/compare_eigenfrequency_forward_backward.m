@@ -9,6 +9,7 @@ ip.addParameter('PMLThreshold',0.30);
 ip.addParameter('OutputDir',fullfile(here,'output_eigen_fb'));
 ip.addParameter('TheoryFile','');
 ip.addParameter('IncludePMLModes',false,@islogical);
+ip.addParameter('MaxRealRelativeError',inf);
 ip.addParameter('RecomputeTheory',false,@islogical);
 ip.addParameter('NumCandidates',28);
 ip.addParameter('ShiftFrequency',[1300+120i,1500+110i,1650+100i,1700+1i,1800+35i]);
@@ -44,7 +45,7 @@ M.Forward=M.Eoz1_fraction;
 M.Backward=M.Eof1_fraction;
 writetable(M,fullfile(opt.OutputDir,'matlab_eigenfrequency_forward_backward.csv'));
 
-[pairs,cost,ambiguity]=pair_by_fb(physical,M);
+[pairs,cost,ambiguity]=pair_by_fb(physical,M,opt.MaxRealRelativeError);
 T=make_pair_table(physical,M,pairs,cost,ambiguity);
 writetable(T,fullfile(opt.OutputDir,'eigenfrequency_forward_backward_comparison.csv'));
 
@@ -52,6 +53,16 @@ A=make_all_mode_table(R,T,opt.PMLThreshold);
 writetable(A,fullfile(opt.OutputDir,'all_comsol_eigenfrequency_forward_backward.csv'));
 S=make_fb_summary(T,height(R),height(physical),height(M));
 writetable(S,fullfile(opt.OutputDir,'eigenfrequency_forward_backward_summary.csv'));
+P=table((1:height(T)).',T.comsol_real_Hz,T.comsol_imag_Hz, ...
+    T.comsol_Forward,T.comsol_Backward,T.theory_real_Hz,T.theory_imag_Hz, ...
+    T.theory_Forward,T.theory_Backward, ...
+    abs(T.real_error_Hz)./max(abs(T.comsol_real_Hz),eps), ...
+    abs(T.imag_error_Hz)./max(abs(T.comsol_imag_Hz),1), ...
+    'VariableNames',{'solution_index','comsol_real_Hz','comsol_imag_Hz', ...
+    'comsol_Forward','comsol_Backward','matlab_real_Hz','matlab_imag_Hz', ...
+    'matlab_Forward','matlab_Backward','real_relative_error','imag_relative_error'});
+plot_comsol_matlab_modes(P,fullfile(opt.OutputDir,'comsol_matlab_modes'), ...
+    'Title','Eigenmodes: COMSOL vs MATLAB','RealTolerance',0.10,'ImagTolerance',0.10);
 save(fullfile(opt.OutputDir,'eigenfrequency_forward_backward_state.mat'), ...
     'pairs','cost','ambiguity','S','-v7.3');
 disp(S);
@@ -59,7 +70,7 @@ result=struct('allComsol',A,'physicalComparison',T,'summary',S, ...
     'theory',M,'pairs',pairs);
 end
 
-function [pairs,pairCost,ambiguity]=pair_by_fb(R,M)
+function [pairs,pairCost,ambiguity]=pair_by_fb(R,M,maxRelativeError)
 nr=height(R);nm=height(M);C=zeros(nr,nm);
 for i=1:nr
     df=abs(M.frequency_real_Hz-R.frequency_real_Hz(i))/12;
@@ -67,18 +78,48 @@ for i=1:nr
         (abs(R.frequency_imag_Hz(i))+0.25)));
     dFB=abs(M.Forward-R.Forward(i))+abs(M.Backward-R.Backward(i));
     C(i,:)=df(:).'+0.35*di(:).'+0.50*dFB(:).';
+    if isfinite(maxRelativeError)
+        rel=abs(M.frequency_real_Hz-R.frequency_real_Hz(i))/R.frequency_real_Hz(i);
+        C(i,rel>maxRelativeError)=inf;
+    end
 end
-if exist('matchpairs','file')==2
+if nm>=nr
+    pairs=monotonic_pairs(C,0.05);
+    if any(~isfinite(C(sub2ind(size(C),pairs(:,1),pairs(:,2)))))
+        error('No order-preserving pairing satisfies MaxRealRelativeError=%.4g.', ...
+            maxRelativeError);
+    end
+elseif exist('matchpairs','file')==2
     pairs=matchpairs(C,1e6,'min');
 else
     pairs=greedy_pairs(C);
 end
+
 pairs=sortrows(pairs,1);
 pairCost=C(sub2ind(size(C),pairs(:,1),pairs(:,2)));
 ambiguity=zeros(size(pairCost));
 for k=1:size(pairs,1)
     q=sort(C(pairs(k,1),:));
     ambiguity(k)=q(min(2,numel(q)))-q(1);
+end
+
+function pairs=monotonic_pairs(C,skipPenalty)
+% Order-preserving assignment with optional unused MATLAB candidates.
+[nr,nm]=size(C);D=inf(nr,nm);prev=zeros(nr,nm);
+D(1,:)=C(1,:)+skipPenalty*(0:nm-1);
+for i=2:nr
+    for j=i:nm
+        k=(i-1):(j-1);
+        [best,q]=min(D(i-1,k)+skipPenalty*(j-k-1));
+        D(i,j)=C(i,j)+best;prev(i,j)=k(q);
+    end
+end
+[~,j]=min(D(nr,:)+skipPenalty*(nm-(1:nm)));
+pairs=zeros(nr,2);
+for i=nr:-1:1
+    pairs(i,:)=[i,j];
+    if i>1,j=prev(i,j);end
+end
 end
 end
 

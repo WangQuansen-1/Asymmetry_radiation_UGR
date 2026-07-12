@@ -41,6 +41,10 @@ cfg.backend = 'fem';
 cfg.femOrder = 2;
 cfg.useFinitePML = false;
 cfg.pmlStretch = 3*(1-1i);
+cfg.pmlAxialRefinement = 1;
+cfg.pmlOrder = 1;
+cfg.useThermoviscous = false;
+cfg.tvbLinearizationFrequency = 1500;
 
 cfg.wallLoss = 'none';
 cfg.wallLossScale = 1.0;
